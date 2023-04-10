@@ -1,0 +1,26 @@
+{% extends 'todoapp/layout.html' %}
+
+{% block content %}
+
+<header class="p-3 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+
+
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="{% url 'index' %}" class="nav-link px-2 text-white">Главное меню</a></li>
+          <li><a href="{% url 'contacts' %}" class="nav-link px-2 text-white">Контакты</a></li>
+            <li><a href="{% url 'add_post' %}" class="nav-link px-2 text-white">Случаи из Жизни</a></li>
+            <li><a href="{% url 'task' %}" class="nav-link px-2 text-white">Истории Из Жизни</a></li>
+        </ul>
+          </div>
+    </div>
+</header>
+
+<h4>Number: +7 777 313 23 53</h4>
+<h5>Mail : rdimovin@mail.ru</h5>
+
+{% endblock content %}

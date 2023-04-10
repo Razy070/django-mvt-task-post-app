@@ -1,0 +1,35 @@
+{% extends 'todoapp/layout.html' %}
+
+{% block content %}
+
+<header class="p-3 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+
+
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="{% url 'index' %}" class="nav-link px-2 text-white">Главное меню</a></li>
+          <li><a href="{% url 'contacts' %}" class="nav-link px-2 text-white">Контакты</a></li>
+            <li><a href="{% url 'add_post' %}" class="nav-link px-2 text-white">Случаи из Жизни</a></li>
+            <li><a href="{% url 'task' %}" class="nav-link px-2 text-white">Истории Из Жизни</a></li>
+        </ul>
+          </div>
+    </div>
+</header>
+
+<div style="margin-top: 50px;" class="ui container">
+<h1 class="ui center aligned header">Случаи из Жизни</h1>
+<form method="post" enctype="multipart/form-data" class="ui form">
+  {% csrf_token %}
+  <div class="field">
+  {{ form.as_p }}
+    </div>
+  <button type="submit" class="ui teal basic button">Загрузить свой случай!</button>
+</form>
+</div>
+
+
+{% endblock content %}

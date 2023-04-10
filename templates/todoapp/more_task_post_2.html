@@ -1,0 +1,19 @@
+{% extends 'todoapp/layout.html' %}
+
+{% block content %}
+
+
+  <div style="margin-top: 20px;" class="container">
+    <h3>Страница содержит детальную информацию</h3>
+</div>
+
+{% for todo in todo_list %}
+<div class="ui segment">
+    <p class="ui big header">№{{ todo.id }} {{ todo.title }}</p>
+</div>
+
+{% endfor %}
+
+
+
+{% endblock content %}
