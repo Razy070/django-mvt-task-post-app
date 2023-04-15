@@ -34,7 +34,7 @@
   </header>
 
 
-            <a href="{% url 'index' %}" class="ui red button">Django Task Uploading</a>
+            <a href="{% url 'index' %}" class="ui red button">Посмотреть список историй</a>
 
 
 {% for todo in todo_list %}
@@ -71,8 +71,8 @@
             <div class="card-body" style="margin-top: 50px;">
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a class="ui red button" href="{% url 'more_button' %}">Delete</a>
-                    <a href="{% url 'detail' %}" class="ui black button">Подробнее</a>
+                    <a class="ui red button" href="#">Delete</a>
+                    <a href="{% url 'detail' todo_id=todo.id %}" class="ui black button">Подробнее</a>
 
                 </div>
               </div>

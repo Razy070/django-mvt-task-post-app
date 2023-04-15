@@ -6,3 +6,6 @@ from .models import ToDo, Post
 
 admin.site.register(ToDo)
 admin.site.register(Post)
+
+
+
